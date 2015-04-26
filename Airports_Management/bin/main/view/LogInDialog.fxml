@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="270.0" prefWidth="400.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.LogInDialog">
+  <bottom>
+    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+      <children>
+        <Hyperlink id="ForgotPassword" layoutX="130.0" layoutY="7.0" onAction="#handleForgotPassword" styleClass="hyperlink-nomal" text="Forgot your password?" />
+      </children>
+    </AnchorPane>
+  </bottom>
+  <center>
+    <AnchorPane prefHeight="141.0" prefWidth="400.0">
+      <children>
+        <GridPane layoutX="80.0" layoutY="35.0" prefWidth="264.0">
+          <children>
+            <TextField id="textUser" fx:id="UserName" disable="false" prefWidth="200.0" promptText="Username" styleClass="text-input-alternative" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <PasswordField fx:id="Password" prefWidth="200.0" promptText="Password" styleClass="text-input-alternative" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <CheckBox id="checkboxRememberMe" fx:id="RememberMe" mnemonicParsing="false" text="Remember me" GridPane.columnIndex="0" GridPane.rowIndex="2">
+              <font>
+                <Font name="Segoe UI" size="12.0" fx:id="x1" />
+              </font>
+              <stylesheets>
+                <URL value="@JMetroLightTheme.css" />
+              </stylesheets>
+            </CheckBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+              <children>
+                <GridPane prefWidth="241.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <children>
+                        <Button id="buttonLogin" defaultButton="true" font="$x1" layoutX="21.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleLogin" text="Login">
+                          <stylesheets>
+                            <URL value="@JMetroLightTheme.css" />
+                          </stylesheets>
+                        </Button>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <children>
+                        <Button id="buttonLogin" defaultButton="false" font="$x1" layoutX="18.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                          <stylesheets>
+                            <URL value="@JMetroLightTheme.css" />
+                          </stylesheets>
+                        </Button>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+            <Label fx:id="labelUser" styleClass="text-warning" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="labelPass" styleClass="text-warning" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="237.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="27.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <stylesheets>
+    <URL value="@JMetroLightTheme.css" />
+  </stylesheets>
+  <top>
+    <AnchorPane prefHeight="60.0" prefWidth="200.0">
+      <children>
+        <Label maxHeight="56.0" maxWidth="131.0" minHeight="56.0" minWidth="131.0" prefHeight="56.0" prefWidth="131.0" styleClass="header" text="LOG IN" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="134.5" AnchorPane.rightAnchor="134.5" AnchorPane.topAnchor="2.0">
+          <font>
+            <Font name="Segoe UI" size="36.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

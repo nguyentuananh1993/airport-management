@@ -1,0 +1,11 @@
+Nhom 01 - Lop Viet Nhat 6C - K56 - Truong Dai hoc Bach Khoa Ha Noi
+--------------------------------------------------------------------
+1. Thu muc Airports_Management: Chua toan bo ma nguon phan mem.
+2. File airports_management.sql: Chua toan bo ma nguong CSDL.
+3. Flie airport_management.backup: Chua ban sao luu CSDL.
+4. File airport_management.jar: File thuc thi phan mem.
+5. File Data.zip: Chua toan bo du lieu phan mem.
+6. erdiagram.jpg: Anh mo hinh thuc the lien ket.
+7. Mohinhquanhe.jpg: Anh mo hinh quan he.
+8. Report_Project_Group_01_AirportManagement.pdf: File bao cao BTL mon THCSDL.
+9. Report_Project_Group_01_AirportManagement.pptx: File dung de thuyet trinh BTL mon THCSDL

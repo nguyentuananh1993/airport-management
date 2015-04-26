@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane minWidth="600.0" prefHeight="520.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.admin.AdminRightPanelStatistics">
+  <center>
+    <AnchorPane prefHeight="400.0" prefWidth="781.0">
+      <children>
+        <TabPane prefHeight="485.0" prefWidth="970.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+          <tabs>
+            <Tab text="Airport Statistic">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <GridPane prefHeight="442.0" prefWidth="959.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                          <children>
+                            <TableView fx:id="tableviewAirportByCountry" prefHeight="442.0" prefWidth="480.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="40.0" text="No." fx:id="tablecolAirportByCountryId" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Country" fx:id="tablecolAirportByCountryCountry" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="163.0" text="Number Of Airports" fx:id="tablecolAirportByCountryNumberOfAirport" />
+                              </columns>
+                            </TableView>
+                            <Label styleClass="text-nomal" text="Airport Statistic after country" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                          </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                          <children>
+                            <TableView fx:id="tableviewAirportTop10" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="100.0">
+                              <columns>
+                                <TableColumn prefWidth="40.0" text="No." fx:id="tabcolAirportTop10Id" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="90.0" text="From Date" fx:id="tabcolAirportTop10FromDay" />
+                                <TableColumn prefWidth="90.0" text="To Date" fx:id="tabcolAirportTop10ToDay" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Airport" fx:id="tabcolAirportTop10Airport" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Passengers" fx:id="tabcolAirportTop10NumberOfGuest" />
+                              </columns>
+                            </TableView>
+                            <Label prefHeight="22.0" prefWidth="387.0" styleClass="text-nomal" text="Top Airport having the largest number of passengers" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="5.0" />
+                            <GridPane fx:id="gridAirportTop10" prefWidth="470.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                              <children>
+                                <Label styleClass="text-nomal" text="From Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label styleClass="text-nomal" text="To Date" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAirportTop10Search" prefWidth="80.0" text="Ok" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="195.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="195.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="80.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Airline Statistic">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <GridPane layoutX="0.0" layoutY="0.0" prefHeight="442.0" prefWidth="959.0">
+                      <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                          <children>
+                            <TableView fx:id="tableviewAirlineByCountry" prefHeight="442.0" prefWidth="480.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="40.0" text="No." fx:id="tablecolAirlineByCountryId" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Country" fx:id="tablecolAirlineByCountryCountry" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Number Of Airline" fx:id="tablecolAirlineByCountryNumberOfAirline" />
+                              </columns>
+                            </TableView>
+                            <Label styleClass="text-nomal" text="Airline Statistic after country" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                          </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                          <children>
+                            <TableView fx:id="tableviewAirlineTop10" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="100.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="40.0" text="No." fx:id="tabcolAirlineTop10Id" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="90.0" text="From Date" fx:id="tabcolAirlineTop10FromDay" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="90.0" text="To Date" fx:id="tabcolAirlineTop10ToDay" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Airline" fx:id="tabcolAirlineTop10Airline" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Passengers" fx:id="tabcolAirlineTop10NumberOfGuest" />
+                              </columns>
+                            </TableView>
+                            <Label styleClass="text-nomal" text="Top Airline having the largest number of passengers" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="5.0" />
+                            <GridPane fx:id="gridAirlineTop10" prefWidth="470.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                              <children>
+                                <Label styleClass="text-nomal" text="From Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label styleClass="text-nomal" text="To Date" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAirlineTop10Search" prefWidth="80.0" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="195.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="195.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="80.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Each Airport">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <GridPane prefHeight="442.0" prefWidth="959.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                          <children>
+                            <GridPane fx:id="gridEachAirport" layoutX="14.0" layoutY="27.0">
+                              <children>
+                                <Label styleClass="text-nomal" text="From Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label styleClass="text-nomal" text="To Date" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Label styleClass="text-nomal" text="Airport:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <ComboBox id="textfieldEachAirportAirport" fx:id="EachAirportAirport" editable="true" prefHeight="30.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                  <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                      <String fx:value="Item 1" />
+                                      <String fx:value="Item 2" />
+                                      <String fx:value="Item 3" />
+                                    </FXCollections>
+                                  </items>
+                                </ComboBox>
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="68.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="132.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                            <GridPane layoutX="23.0" layoutY="136.0" prefWidth="189.0">
+                              <children>
+                                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleEachAirportSearch" prefHeight="26.0" prefWidth="90.0" text="Ok" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleEachAirportSave" prefHeight="26.0" prefWidth="90.0" text="Save" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Button mnemonicParsing="false" onAction="#handleEachAirportClearAll" prefHeight="26.0" prefWidth="90.0" text="Clear All" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                          <children>
+                            <TableView fx:id="tableviewEachAirport" prefHeight="442.0" prefWidth="725.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="49.0" text="No." fx:id="tablecolEachAirportId" />
+                                <TableColumn prefWidth="90.0" text="From Date" fx:id="tablecolEachAirportFromDay" />
+                                <TableColumn prefWidth="90.0" text="To Date" fx:id="tablecolEachAirportToDay" />
+                                <TableColumn prefWidth="118.0" text="Airport" fx:id="tablecolEachAirportAirport" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Passengers" fx:id="tablecolEachAirportNumberOfGuest" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Number Of Route" fx:id="tablecolEachAirportNumberOfRoute" />
+                              </columns>
+                            </TableView>
+                          </children>
+                        </AnchorPane>
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="479.0" minWidth="10.0" prefWidth="234.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="738.0" minWidth="10.0" prefWidth="725.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="35.0" prefWidth="970.0">
+      <children>
+        <Label styleClass="header-small" text="Statistics" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

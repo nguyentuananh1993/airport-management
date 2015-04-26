@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="361.0" prefWidth="345.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.admin.editpanel.EditPanelScheduleController">
+  <center>
+    <AnchorPane prefHeight="314.0" prefWidth="343.0">
+      <children>
+        <GridPane id="gridSchedule" layoutX="23.0" layoutY="3.0" prefWidth="320.0">
+          <children>
+            <Label styleClass="text-nomal" text="FlightID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField id="routeId" fx:id="flightId" prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <ComboBox fx:id="depairportiata" editable="true" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <ComboBox fx:id="arrairportiata" editable="true" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="depTime" prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="arrTime" prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="equipId" editable="true" prefHeight="30.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="repeat" prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="duration" prefWidth="200.0" styleClass="text-input-alternative" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label styleClass="text-nomal" text="Dep:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label styleClass="text-nomal" text="DepTime:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label styleClass="text-nomal" text="ArrTime:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label styleClass="text-nomal" text="EquipID" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Label styleClass="text-nomal" text="Repeat:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Label styleClass="text-nomal" text="Duration:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label fx:id="labelFlightId" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label id="labelRouteId" fx:id="labelDepIata" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="labelEquipId" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="labelArrTime" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="labelDepTime" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label styleClass="text-nomal" text="Arr:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="labelArrIata" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label id="la" fx:id="labelRepeat" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label fx:id="labelDuration" styleClass="text-warning" text="" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="76.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="214.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="6.0" prefWidth="30.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane layoutX="85.0" layoutY="256.0" prefWidth="176.0">
+          <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefWidth="85.0" text="Ok" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="buttonClearAll" mnemonicParsing="false" onAction="#handleClearAll" text="ClearAll" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="53.0" prefWidth="345.0">
+      <children>
+        <Label styleClass="text-small-header" text="Schedule Editor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <Button minHeight="20.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="20.0" styleClass="button-close" text="" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

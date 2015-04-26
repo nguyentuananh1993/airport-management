@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="520.0" prefWidth="230.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.GuestLeftPanel">
+  <center>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background-panel-left">
+      <children>
+        <Button id="buttonSearchRoute" fx:id="SearchPath" defaultButton="false" mnemonicParsing="false" onAction="#handleSearchPath" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Search Path" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+          <stylesheets>
+            <URL value="@JMetroLightTheme.css" />
+          </stylesheets>
+        </Button>
+        <Button id="buttonSearchAirport" fx:id="SearchAirport" cancelButton="false" defaultButton="true" mnemonicParsing="false" onAction="#handleSearchAirport" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Search Airport" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <stylesheets>
+            <URL value="@JMetroLightTheme.css" />
+          </stylesheets>
+        </Button>
+        <Button id="buttonSearchRoute" fx:id="SearchRoute" cancelButton="false" defaultButton="false" mnemonicParsing="false" onAction="#handleSearchRoute" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Search Route" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+          <stylesheets>
+            <URL value="@JMetroLightTheme.css" />
+          </stylesheets>
+        </Button>
+        <Button id="buttonSearchAirport" fx:id="SearchFlight" defaultButton="false" mnemonicParsing="false" onAction="#handleSearchFlight" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Search Flight" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+          <stylesheets>
+            <URL value="@JMetroLightTheme.css" />
+          </stylesheets>
+        </Button>
+      </children>
+      <stylesheets>
+        <URL value="@JMetroLightTheme.css" />
+      </stylesheets>
+    </AnchorPane>
+  </center>
+</BorderPane>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="525.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.admin.AdminRightPanelEdit">
+  <bottom>
+    <AnchorPane prefHeight="-1.0" prefWidth="-1.0" />
+  </bottom>
+  <center>
+    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+      <children>
+        <TabPane prefHeight="449.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+          <tabs>
+            <Tab text="Airlines">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView id="airlineTable" fx:id="AirlineTable" prefHeight="363.0" prefWidth="950.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="ID" fx:id="tableColAirlineId" />
+                        <TableColumn prefWidth="75.0" text="Name" fx:id="tableColAirlineName" />
+                        <TableColumn prefWidth="75.0" text="IATA" fx:id="tableColAirlineIata" />
+                        <TableColumn prefWidth="75.0" text="Country" fx:id="tableColAirlineCountry" />
+                        <TableColumn prefWidth="75.0" text="Active" fx:id="tableColAirlineActive" />
+                      </columns>
+                    </TableView>
+                    <GridPane prefWidth="256.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                      <children>
+                        <Button fx:id="buttonAirlineAdd" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleAirlineAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonAirlineEdit" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleAirlineEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonAirlineDelete" disable="false" mnemonicParsing="false" onAction="#handleAirlineDelete" prefWidth="80.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAirlineLoadDatabase" prefWidth="127.0" text="Load Database" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Airports">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView id="airportTable" fx:id="AirportTable" prefHeight="353.0" prefWidth="940.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="ID" fx:id="tableColAirportId" />
+                        <TableColumn prefWidth="75.0" text="Name" fx:id="tableColAirportName" />
+                        <TableColumn prefWidth="75.0" text="City" fx:id="tableColAirportCity" />
+                        <TableColumn prefWidth="75.0" text="Country" fx:id="tableColAirportCountry" />
+                        <TableColumn prefWidth="75.0" text="IATA" fx:id="tableColAirportIata" />
+                        <TableColumn prefWidth="75.0" text="Latitude" fx:id="tableColAirportLatitude" />
+                        <TableColumn prefWidth="75.0" text="Longitude" fx:id="tableColAirportLongitude" />
+                        <TableColumn prefWidth="75.0" text="Timezone" fx:id="tableColAirportTimezone" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="DST" fx:id="tableColAirportDestination" />
+                      </columns>
+                    </TableView>
+                    <GridPane prefWidth="256.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                      <children>
+                        <Button fx:id="buttonAirportAdd" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleAirportAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonAirportDelete" disable="false" mnemonicParsing="false" onAction="#handleAirportDelete" prefWidth="80.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonAirportEdit" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleAirportEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAirportLoadDatabase" prefWidth="127.0" text="Load Database" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Routes">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView id="routeTable" fx:id="RouteTable" prefHeight="353.0" prefWidth="940.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="ID" fx:id="tableColRouteId" />
+                        <TableColumn prefWidth="75.0" text="Airline ID" fx:id="tableColRouteAirlineId" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="96.0" text="Airline IATA" fx:id="tableColRouteAirlineIata" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="115.0" text="Dep Airport ID" fx:id="tableColRouteDepAirportId" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Dep Airport IATA" fx:id="tableColRouteDepAirportIata" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Arr Airport ID" fx:id="tableColRouteArrAirportId" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="150.0" text="Arr Airport IATA" fx:id="tableColRouteArrAirportIata" />
+                      </columns>
+                    </TableView>
+                    <GridPane prefWidth="256.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                      <children>
+                        <Button fx:id="buttonRouteAdd" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleRouteAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonRouteEdit" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleRouteEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonRouteDelete" disable="false" mnemonicParsing="false" onAction="#handleRouteDelete" prefWidth="80.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleRouteLoadDatabase" prefWidth="127.0" text="Load Database" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Schedules">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView fx:id="ScheduleTable" prefHeight="353.0" prefWidth="940.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                      <columns>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="106.0" text="Flight ID" fx:id="tableColScheduleFlightId" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Dep IATA" fx:id="tableColScheduleDepAirportIata" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Arr IATA" fx:id="tableColScheduleArrAirportIata" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="Dep Time" fx:id="tableColScheduleDepTime" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Arr Time" fx:id="tableColScheduleArrTime" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="EquipID" fx:id="tableColScheduleEquipId" />
+                        <TableColumn prefWidth="75.0" text="Repeat" fx:id="tableColScheduleRepeat" />
+                        <TableColumn prefWidth="75.0" text="Duration" fx:id="tableColScheduleDuration" />
+                      </columns>
+                    </TableView>
+                    <GridPane prefWidth="256.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                      <children>
+                        <Button fx:id="buttonScheduleAdd" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleScheduleAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonScheduleEdit" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleScheduleEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonScheduleDelete" disable="false" mnemonicParsing="false" onAction="#handleScheduleDelete" prefWidth="80.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleScheduleLoadDatabase" prefWidth="127.0" text="Load Database" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Aircraft Info">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView id="aircraftinfoTable" fx:id="AircraftInfoTable" prefHeight="353.0" prefWidth="940.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="ID" fx:id="tableColAircraftInfoId" />
+                        <TableColumn prefWidth="75.0" text="Name" fx:id="tableColAircraftInfoName" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="119.0" text="Number of Seats" fx:id="tableColAircraftInfoNumberOfSeat" />
+                      </columns>
+                    </TableView>
+                    <GridPane prefWidth="256.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                      <children>
+                        <Button fx:id="buttonAircraftInfoAdd" defaultButton="true" disable="false" mnemonicParsing="false" onAction="#handleAircraftInfoAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button fx:id="buttonAircraftInfoEdit" defaultButton="false" disable="false" mnemonicParsing="false" onAction="#handleAircraftInfoEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button id="buttonAirlineDelete" fx:id="buttonAircraftInfoDelete" disable="false" mnemonicParsing="false" onAction="#handleAircraftInfoDelete" prefWidth="80.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAircraftInfoLoadDatabase" prefWidth="127.0" text="Load Database" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="35.0" prefWidth="970.0">
+      <children>
+        <Label styleClass="header-small" text="Database Manager" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

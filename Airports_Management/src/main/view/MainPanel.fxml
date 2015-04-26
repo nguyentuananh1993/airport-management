@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" snapToPixel="true" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.MainPanel">
+  <bottom>
+    <AnchorPane prefHeight="25.0" prefWidth="1200.0" styleClass="background-panel-bottom">
+      <children>
+        <GridPane prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <Label prefWidth="56.0" styleClass="text-status" text="  Status:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="status" styleClass="text-status" text="" wrapText="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="597.0" minWidth="10.0" prefWidth="56.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1154.0" minWidth="10.0" prefWidth="1144.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+  </bottom>
+  <center>
+    <AnchorPane prefHeight="525.0" prefWidth="970.0" />
+  </center>
+  <left>
+    <AnchorPane maxHeight="525.0" maxWidth="230.0" minHeight="525.0" minWidth="230.0" prefHeight="525.0" prefWidth="230.0" />
+  </left>
+  <stylesheets>
+    <URL value="@JMetroLightTheme.css" />
+  </stylesheets>
+  <top>
+    <AnchorPane maxHeight="92.00009999999747" minHeight="78.0" prefHeight="92.00009999999747" prefWidth="1198.0" styleClass="background-panel-top">
+      <children>
+        <Label layoutX="24.0" layoutY="30.0" styleClass="header" text="Flight Information">
+          <font>
+            <Font name="Segoe UI" size="30.0" />
+          </font>
+        </Label>
+        <Hyperlink id="Log" fx:id="LogIn" contentDisplay="RIGHT" onAction="#handleLog" styleClass="hyperlink-nomal" text="Log In" textAlignment="RIGHT" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="21.0" />
+        <Hyperlink id="Log" fx:id="LogOut" contentDisplay="RIGHT" onAction="#handleLog" styleClass="hyperlink-nomal" text="Log Out" textAlignment="RIGHT" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="43.0" />
+        <Button id="WinClose" fx:id="ButtonClose" minHeight="19.0" mnemonicParsing="false" onAction="#handleWinClose" prefHeight="19.0" styleClass="button-close" text="" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Label prefHeight="29.0" prefWidth="32.000099999997474" styleClass="button-icon" text="" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0" />
+        <Label styleClass="text-title" text="Airports Management" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="6.0" />
+        <Button id="WinMaximum" fx:id="ButtonMax" minHeight="19.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleWinMax" prefHeight="19.0" prefWidth="25.0001220703125" styleClass="button-maximum" text="" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="0.0" />
+        <Button id="Win" fx:id="ButtonMin" minHeight="19.0" minWidth="24.9998779296875" mnemonicParsing="false" onAction="#handleWinMin" prefHeight="19.0" prefWidth="25.0" styleClass="button-minimum" text="" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="0.0" />
+      </children>
+      <stylesheets>
+        <URL value="@JMetroLightTheme.css" />
+      </stylesheets>
+    </AnchorPane>
+  </top>
+</BorderPane>

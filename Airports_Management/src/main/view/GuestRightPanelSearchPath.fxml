@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane minWidth="600.0" prefHeight="520.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.guest.GuestRightPanelSearchPath">
+  <center>
+    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+      <children>
+        <GridPane prefHeight="70.0" prefWidth="935.0" AnchorPane.bottomAnchor="435.0" AnchorPane.leftAnchor="17.5" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="0.0">
+          <children>
+            <Label prefWidth="220.0" styleClass="text-nomal" text="Departed (*):" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label prefWidth="255.0" styleClass="text-nomal" text="Arrived (*):" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label styleClass="text-nomal" text="Intermediates (max=3):" GridPane.columnIndex="4" GridPane.rowIndex="0">
+              <font>
+                <Font name="Segoe UI" size="12.0" />
+              </font>
+            </Label>
+            <ComboBox fx:id="departed" editable="true" prefHeight="35.0" prefWidth="260.0" promptText="Departed Airport" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <ComboBox fx:id="arrived" editable="true" prefHeight="35.0" prefWidth="260.0" promptText="Arrived Airport" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="intermediate" prefWidth="100.0" styleClass="text-input-alternative" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSearch" prefHeight="26.0" prefWidth="100.0" text="Search" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#handleClearAll" prefHeight="26.0" prefWidth="100.0" text="Clear All" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.25" minWidth="16.25" prefWidth="16.25" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.25" minWidth="16.25" prefWidth="16.25" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.25" minWidth="16.25" prefWidth="16.25" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.25" minWidth="16.25" prefWidth="16.25" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <TableView id="routetable" fx:id="pathtable" disable="false" mouseTransparent="false" pickOnBounds="false" prefHeight="312.0" prefWidth="935.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="17.5" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="90.0">
+          <columns>
+            <TableColumn maxWidth="860.0" minWidth="20.0" prefWidth="65.0" resizable="true" text="No." fx:id="no" />
+            <TableColumn maxWidth="860.0" minWidth="20.0" prefWidth="765.0" resizable="true" text="Paths" fx:id="path" />
+            <TableColumn maxWidth="860.0" minWidth="20.0" prefWidth="85.0" resizable="true" text="Length (km)" fx:id="length" />
+          </columns>
+        </TableView>
+        <GridPane prefHeight="30.0" prefWidth="935.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="17.5" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="420.0">
+          <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSearchRoute" prefHeight="25.0" prefWidth="120.0" text="Search Route" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSearchFlight" prefHeight="25.0" prefWidth="120.0" text="Search Flight" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSearchAirport" prefHeight="25.0" prefWidth="120.0" text="Search Airport" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="375.0" minWidth="375.0" prefWidth="375.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="35.0" prefWidth="970.0">
+      <children>
+        <Label styleClass="header-small" text="Search Path" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

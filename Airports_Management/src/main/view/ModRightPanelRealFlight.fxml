@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane minWidth="600.0" prefHeight="520.0" prefWidth="970.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.mod.ModRightPanelRealFlight">
+  <center>
+    <AnchorPane prefHeight="400.0" prefWidth="781.0">
+      <children>
+        <TableView fx:id="tableviewRealFlight" prefHeight="420.0" prefWidth="950.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="65.0" text="FlightID" fx:id="tablecolFlightId" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="68.0" text="Day" fx:id="tablecolDay" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="156.0" text="Number of Passengers" fx:id="tablecolNumberOfPeople" />
+          </columns>
+        </TableView>
+        <GridPane prefWidth="255.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+          <children>
+            <Button fx:id="buttonAdd" defaultButton="false" mnemonicParsing="false" onAction="#handleAdd" prefWidth="80.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="buttonEdit" mnemonicParsing="false" onAction="#handleEdit" prefWidth="80.0" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#handleDelete" prefWidth="81.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="85.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="85.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleLoadData" text="Load Data" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="35.0" prefWidth="970.0">
+      <children>
+        <Label styleClass="header-small" text="Real Flight" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

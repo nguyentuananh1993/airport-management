@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="321.0" prefWidth="487.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <center>
+    <AnchorPane prefHeight="321.0" prefWidth="487.0" styleClass="background-panel-loading">
+      <children>
+        <Label layoutX="25.0" layoutY="132.0" styleClass="header" text="AIRPORT MANAGEMENT" />
+        <Label layoutX="20.0" layoutY="290.0" styleClass="text-nomal" text="Status:" />
+        <Label layoutX="67.0" layoutY="290.0" styleClass="text-nomal" text="Label" />
+        <Label layoutX="18.0" layoutY="13.0" text="Việt nhật ICON" />
+        <ProgressBar layoutX="110.0" layoutY="213.0" prefWidth="277.0" progress="0.0" />
+      </children>
+    </AnchorPane>
+  </center>
+</BorderPane>

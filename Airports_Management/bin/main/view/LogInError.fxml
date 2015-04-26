@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="150.0" prefWidth="450.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <center>
+    <Label styleClass="header-small" text="Username or password is wrong">
+      <font>
+        <Font size="40.0" />
+      </font>
+    </Label>
+  </center>
+  <stylesheets>
+    <URL value="@JMetroLightTheme.css" />
+  </stylesheets>
+</BorderPane>

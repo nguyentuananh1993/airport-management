@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<BorderPane prefHeight="520.0" prefWidth="230.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.ModLeftPanel">
+  <center>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background-panel-left">
+      <children>
+        <Button fx:id="EditSchedule" defaultButton="true" mnemonicParsing="false" onAction="#handleEditSchedule" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Edit Schedule" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Button fx:id="RealFlight" defaultButton="false" mnemonicParsing="false" onAction="#handleRealFlight" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="RealFlight" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+        <Button fx:id="Statistics" defaultButton="false" mnemonicParsing="false" onAction="#handleStatistics" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Statistics" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+        <Button fx:id="Account" defaultButton="false" mnemonicParsing="false" onAction="#handleAccount" prefHeight="40.0" prefWidth="230.0" styleClass="button-left-panel" text="Account" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0" />
+      </children>
+    </AnchorPane>
+  </center>
+</BorderPane>

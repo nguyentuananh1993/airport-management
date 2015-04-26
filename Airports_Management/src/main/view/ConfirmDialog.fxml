@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><Label contentDisplay="CENTER" graphicTextGap="12.0" layoutX="-10.5" layoutY="-4.0" prefHeight="50.0" prefWidth="211.0" text="Do you want to continue ?" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" /><Button layoutX="40.0" layoutY="52.5" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Yes" /><Button layoutX="134.0" layoutY="51.5" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="No" />
+</children></AnchorPane>
